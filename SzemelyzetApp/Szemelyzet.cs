@@ -27,5 +27,16 @@ namespace SzemelyzetApp
                 return fonok.Letszam;
             }
         }
+        public void Listazas()
+        {
+            fonok.Listazas();
+        }
+        public int BeosztottakSzama
+        {
+            get
+            {
+                return fonok.BeosztottakSzama;
+            }
+        }
     }
 }

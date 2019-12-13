@@ -76,5 +76,25 @@ namespace SzemelyzetApp
                 return l;
             }
         }
+        public void Listazas()
+        {
+          Console.WriteLine(this.nev);
+          foreach (var b in beosztottak)
+          {
+                b.Listazas();
+          }
+        }
+        public int BeosztottakSzama
+        {
+            get
+            {
+                var l = 1;
+                foreach (var b in beosztottak)
+                {
+                    l+=b.BeosztottakSzama;
+                }
+                return l;
+            }
+        }
     }
 }
