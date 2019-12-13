@@ -88,12 +88,20 @@ namespace SzemelyzetApp
         {
             get
             {
-                var l = 1;
+                int szam;
+                if (beosztottak.Count==0)
+                {
+                    szam = 1;
+                }
+                else
+                {
+                    szam = 0;
+                }
                 foreach (var b in beosztottak)
                 {
-                    l+=b.BeosztottakSzama;
+                    szam += b.BeosztottakSzama;
                 }
-                return l;
+                return szam;
             }
         }
     }
